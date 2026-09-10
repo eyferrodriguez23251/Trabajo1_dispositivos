@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polimorfismo - Dispositivos</title>
+</head>
+<body>
+
+<h1>Dispositivos</h1>
+<div class="total">
+    Total de dispositivos: <strong th:text="${total}"></strong>
+</div>
+
+<div class="lista">
+    <div class="card" th:each="dispositivo, i : ${dispositivos}">
+        <h2 th:text="${i.count + '. ' + dispositivo.nombre}"></h2>
+        <p><strong>Marca:</strong> <span th:text="${dispositivo.marca}"></span></p>
+        <p><strong>Modelo:</strong> <span th:text="${dispositivo.modelo}"></span></p>
+        <p><strong>Conexión:</strong> <span th:text="${dispositivo.tipoConexion}"></span></p>
+        <p><strong>Estado:</strong> <span th:text="${dispositivo.estado}"></span></p>
+
+        <div class="acciones">
+            <p><strong>Conectar:</strong> <span th:text="${dispositivo.conectar(dispositivo)}"></span></p>
+            <p><strong>Transmitir:</strong> <span th:text="${dispositivo.transmitir(dispositivo)}"></span></p>
+            <p><strong>Desconectar:</strong> <span th:text="${dispositivo.desconectar(dispositivo)}"></span></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
