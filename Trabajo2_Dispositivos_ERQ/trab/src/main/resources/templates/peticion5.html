@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Petición 5</title>
+</head>
+<body>
+<div class="box">
+    <h1 th:text="${titulo}"></h1>
+
+    <p>Dispositivo obtenido con el mayor valor en el atributo Integer <strong>consumoVatios</strong>:</p>
+
+    <div class="card" th:if="${dispositivo != null}">
+        <h3><span th:text="${dispositivo.nombre}"></span></h3>
+        <p><strong>Marca:</strong> <span th:text="${dispositivo.marca}"></span></p>
+        <p><strong>Modelo:</strong> <span th:text="${dispositivo.modelo}"></span></p>
+        <p><strong>Tipo Conexión:</strong> <span th:text="${dispositivo.tipoConexion}"></span></p>
+        <p><strong>Consumo Vatios (Integer Máximo):</strong> <span th:text="${dispositivo.consumoVatios}"></span> W</p>
+        <p><strong>Estado:</strong> <span th:text="${dispositivo.estado}"></span></p>
+    </div>
+
+    <br><br>
+    <a href="/">← Volver al Inicio</a>
+</div>
+</body>
+</html>

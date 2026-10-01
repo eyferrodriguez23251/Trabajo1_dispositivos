@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Petición 4</title>
+</head>
+<body>
+<div class="box">
+    <h1 th:text="${titulo}"></h1>
+
+    <div class="result true">
+        ¿Existe algún dispositivo con tipo de conexión 'WiFi'? (anyMatch):
+        <span th:text="${match1}"></span>
+    </div>
+
+    <div class="result true">
+        ¿Existe algún dispositivo con estado 'Inactivo'? (anyMatch):
+        <span th:text="${match2}"></span>
+    </div>
+
+    <div class="result true">
+        ¿NINGÚN dispositivo tiene un consumo mayor a 1000 W? (noneMatch):
+        <span th:text="${matchNone}"></span>
+    </div>
+
+    <br><br>
+    <a href="/">← Volver al Inicio</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Petición 3</title>
+</head>
+<body>
+<div class="box">
+    <h1 th:text="${titulo}"></h1>
+    <p>Se aplanaron las listas de todos los objetos y se obtuvo la lista del atributo String <strong>Marca</strong> de todos los dispositivos:</p>
+
+    <ul>
+        <li th:each="marca : ${marcas}" th:text="${marca}"></li>
+    </ul>
+
+    <br><br>
+    <a href="/">← Volver al Inicio</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabajo 2 - Polimorfismo y Programación Funcional</title>
+</head>
+<body>
+
+<h1>Panel Principal - Trabajo 2 Polimorfismo</h1>
+
+<div class="nav">
+    <strong>Navegación de Peticiones:</strong><br><br>
+    <a href="/peticion1">Petición 1 (Nombres separados por coma)</a> |
+    <a href="/peticion2">Petición 2 (Estadísticas de Listas)</a> |
+    <a href="/peticion3">Petición 3 (Lista Atributo String)</a> |
+    <a href="/peticion4">Petición 4 (anyMatch / noneMatch)</a> |
+    <a href="/peticion5">Petición 5 (Mayor valor Integer)</a>
+</div>
+
+<h2>Los 12 Objetos Creados en Repository</h2>
+
+<div th:each="obj, i : ${objetos}" class="card">
+    <h3 th:text="${i.count + '. ' + obj.nombre}"></h3>
+    <p><strong>Clase Concreta:</strong> <span th:text="${obj.class.simpleName}"></span></p>
+    <p><strong>Cantidad de Dispositivos en Lista:</strong> <span th:text="${obj.dispositivos.size()}"></span></p>
+    
+    <div class="messages">
+        <p><strong>Conectar:</strong> <span th:text="${obj.conectar(obj.dispositivos)}"></span></p>
+        <p><strong>Transmitir:</strong> <span th:text="${obj.transmitir(obj.dispositivos)}"></span></p>
+        <p><strong>Desconectar:</strong> <span th:text="${obj.desconectar(obj.dispositivos)}"></span></p>
+    </div>
+</div>
+
+</body>
+</html>
