@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Petición 2</title>
+</head>
+<body>
+<div class="box">
+    <h1 th:text="${titulo}"></h1>
+    <p>Resumen estadístico del número de elementos en la lista de cada uno de los 12 objetos:</p>
+
+    <table>
+        <tr><th>Métrica</th><th>Valor</th></tr>
+        <tr><td>Conteo de Objetos (Count)</td><td th:text="${conteo}"></td></tr>
+        <tr><td>Suma Total de Dispositivos (Sum)</td><td th:text="${suma}"></td></tr>
+        <tr><td>Promedio de Dispositivos por Lista (Average)</td><td th:text="${promedio}"></td></tr>
+        <tr><td>Mínimo en una Lista (Min)</td><td th:text="${min}"></td></tr>
+        <tr><td>Máximo en una Lista (Max)</td><td th:text="${max}"></td></tr>
+    </table>
+
+    <br><br>
+    <a href="/">← Volver al Inicio</a>
+</div>
+</body>
+</html>

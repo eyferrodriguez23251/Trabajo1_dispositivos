@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Tercer trabajo - Dispositivos</title></head>
+<body>
+<h1>Tercer trabajo - Colecciones y programación funcional</h1>
+<h2>Enums</h2>
+<p><strong>TipoDispositivoEnum:</strong>
+    <span th:each="tipo, iter : ${enumTipos}">
+        <span th:text="${tipo}"></span><span th:if="${!iter.last}">, </span>
+    </span>
+</p>
+<p><strong>Categoria:</strong>
+    <span th:each="categoria, iter : ${enumCategorias}">
+        <span th:text="${categoria}"></span><span th:if="${!iter.last}">, </span>
+    </span>
+</p>
+<h2>Punto 1 y 2: Stack y ListIterator</h2>
+<ul><li th:each="obj : ${stackObjetos}" th:text="${obj}"></li></ul>
+<h2>Punto 1 y 2: Deque e Iterator</h2>
+<p>Red: <span th:text="${red.nombre}"></span> — tipo: <span th:text="${red.tipo}"></span> — categoría: <span th:text="${red.categoria}"></span></p>
+<ul><li th:each="obj : ${dequeObjetos}" th:text="${obj}"></li></ul>
+<h2>Punto 3: programación funcional (tipo COMPUTADOR)</h2>
+<ul><li th:each="obj : ${filtrados}" th:text="${obj}"></li></ul>
+<h2>Punto 4 y 5: Function y verTotales</h2>
+<ul><li th:each="total : ${totales}" th:text="${total}"></li></ul>
+<p><a href="/">Volver al proyecto original</a></p>
+</body></html>

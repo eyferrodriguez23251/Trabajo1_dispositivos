@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Petición 1</title>
+</head>
+<body>
+<div class="box">
+    <h1 th:text="${titulo}"></h1>
+    <p><strong>Resultado (Stream map + Collectors.joining):</strong></p>
+    <div style="background: #e3f2fd; padding: 15px; border-radius: 5px; font-size: 1.1em;" th:text="${resultado}"></div>
+    <br><br>
+    <a href="/">← Volver al Inicio</a>
+</div>
+</body>
+</html>
